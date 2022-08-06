@@ -9,13 +9,13 @@ def cartesiano(conj1, conj2):
 
     return retorno
 
-nome_arquivo = str(input("insira o nome do arquivo:"))
+arq = str(input("insira o nome do arquivo .txt:"))
 
-partes = nome_arquivo.split(".")
+partes = arq.split(".")
 
-nome_arquivo = partes[0] + ".txt"
+arq = partes[0] + ".txt"
 
-with open(nome_arquivo, "r") as arquivo:
+with open(arq, "r") as arquivo:
 
     linhas = arquivo.readlines()
 
@@ -27,8 +27,8 @@ with open(nome_arquivo, "r") as arquivo:
         cont1+=1
 
 cont = 1
-repeticoes = int(linhas[0])
-while repeticoes:
+rep = int(linhas[0])
+while rep:
     conjunto1 = set(linhas[cont + 1].split(", "))
     conjunto2 = set(linhas[cont + 2].split(", "))
 
@@ -49,4 +49,4 @@ while repeticoes:
         print("Produto Cartesiano: Conjunto 1" + str(conjunto1) + ",Conjunto 2" + str(conjunto2) + ",Resultado: " + str(retorno))
 
     cont += 3
-    repeticoes -= 1
+    rep -= 1
