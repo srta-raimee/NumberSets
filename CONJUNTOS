@@ -1,3 +1,5 @@
+#LARISSA RAIMEE GOMES
+
 def cartesiano(conj1, conj2):
     retorno = []
     for x in conj1:
